@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      gridTemplateColumns: {
+        restaurant: "5rem 3fr",
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

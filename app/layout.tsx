@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./ui/globals.css";
+import { raleway } from "./ui/fonts";
 
 export const metadata: Metadata = {
   title: "Ceres",
@@ -13,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={`${raleway.className}`}>{children}</body>
     </html>
   );
 }

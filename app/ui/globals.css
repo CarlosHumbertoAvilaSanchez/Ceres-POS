@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.restaurant__currentPage{
+    transition: top 0.5s;
+}
+
+.restaurant__nav li:nth-child(1):hover ~ .restaurant__currentPage{
+    top: -1rem;
+}
+
+.restaurant__nav li:nth-child(2):hover ~ .restaurant__currentPage{
+    top: 4rem;
+}
+
+.restaurant__nav li:nth-child(3):hover ~ .restaurant__currentPage{
+    top: 8.75rem;
+}
+.restaurant__nav li:nth-child(4):hover ~ .restaurant__currentPage{
+    top: 14rem;
+}
