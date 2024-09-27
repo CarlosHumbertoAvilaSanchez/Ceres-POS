@@ -1,5 +1,5 @@
 import { categories } from "@/app/lib/placeholder-data";
-import { useState } from "react";
+import { useCategories } from "@/app/lib/hooks/useCategories";
 
 function FilterOption({
   category,
@@ -15,7 +15,7 @@ function FilterOption({
       onClick={() => onFilterChange(category)}
       className={`${
         active ? "bg-green-600" : "bg-gray-50"
-      } p-2 rounded-lg w-[100px] `}
+      } p-2 rounded-lg w-[100px] font-semibold`}
     >
       {category}
     </button>
@@ -23,7 +23,7 @@ function FilterOption({
 }
 
 export default function DishCategoryFilter() {
-  const [activeCategory, setActiveCategory] = useState<string>("Todos");
+  const { activeCategory, setActiveCategory } = useCategories();
   return (
     <>
       <div className="flex gap-3">

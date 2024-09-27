@@ -1,6 +1,6 @@
 import type { Dish } from "../../../lib/definitions";
 
-export function DishCard({ dish }: { dish: Dish }) {
+export default function DishCard({ dish }: { dish: Dish }) {
   return (
     <>
       <div className="flex flex-col bg-gray-100 items-center py-2 px-4 rounded-lg cursor-pointer justify-center gap-6">
