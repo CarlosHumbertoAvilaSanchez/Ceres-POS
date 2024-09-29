@@ -1,9 +1,13 @@
 import type { Dish } from "../../../lib/definitions";
-
+import { useCart } from "../../../lib/hooks/useCart";
 export default function DishCard({ dish }: { dish: Dish }) {
+  const { addToCart } = useCart();
   return (
     <>
-      <div className="flex flex-col bg-gray-100 items-center py-2 px-4 rounded-lg cursor-pointer justify-center gap-6">
+      <div
+        onClick={() => addToCart(dish)}
+        className="flex flex-col bg-gray-100 items-center py-2 px-4 rounded-lg cursor-pointer justify-center gap-6"
+      >
         <header className="w-full h-auto">
           <img
             src={dish.imageURL}

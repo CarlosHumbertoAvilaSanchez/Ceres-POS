@@ -8,7 +8,7 @@ export default function Menu() {
   const filteredDishes = filterDishes(Dishes);
 
   return (
-    <main className="bg-red-200 rounded-md p-8 grid grid-rows-menu">
+    <main className="rounded-md p-8 grid grid-rows-menu">
       <header>
         <h1 className="font-semibold text-4xl">Menú</h1>
         <DishCategoryFilter />

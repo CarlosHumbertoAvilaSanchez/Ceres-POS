@@ -14,7 +14,7 @@ function FilterOption({
     <button
       onClick={() => onFilterChange(category)}
       className={`${
-        active ? "bg-green-600" : "bg-gray-50"
+        active ? "bg-green-600" : "bg-gray-200"
       } p-2 rounded-lg w-[100px] font-semibold`}
     >
       {category}
