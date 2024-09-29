@@ -1,5 +1,5 @@
-import { categories } from "@/app/lib/placeholder-data";
-import { useCategories } from "@/app/lib/hooks/useCategories";
+import { categories } from "@lib/placeholder-data";
+import { useCategories } from "@hooks/useCategories";
 
 function FilterOption({
   category,

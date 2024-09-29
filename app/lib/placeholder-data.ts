@@ -1,4 +1,4 @@
-import type { Dish } from "./definitions";
+import type { Dish } from "@types";
 
 export const Dishes: Array<Dish> = [
     {

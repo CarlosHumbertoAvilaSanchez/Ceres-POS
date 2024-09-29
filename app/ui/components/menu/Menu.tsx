@@ -1,7 +1,7 @@
-import DishesGrid from "@/app/ui/components/menu/DishesGrid";
-import DishCategoryFilter from "@/app/ui/components/menu/DishCategoryFilter";
-import { useCategories } from "@/app/lib/hooks/useCategories";
-import { Dishes } from "@/app/lib/placeholder-data";
+import DishesGrid from "@components/menu/DishesGrid";
+import DishCategoryFilter from "@components/menu/DishCategoryFilter";
+import { useCategories } from "@hooks/useCategories";
+import { Dishes } from "@lib/placeholder-data";
 
 export default function Menu() {
   const { filterDishes } = useCategories();

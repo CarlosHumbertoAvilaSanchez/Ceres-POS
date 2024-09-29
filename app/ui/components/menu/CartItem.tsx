@@ -1,11 +1,11 @@
-import type { Dish } from "../../../lib/definitions";
-import { useCart } from "../../../lib/hooks/useCart";
+import type { Dish } from "@lib/definitions";
+import { useCart } from "@hooks/useCart";
 import { useState } from "react";
-import { ArrowIcon } from "../../icons/ArrowIcon";
-import { IncrementIcon } from "../../icons/IncrementIcon";
-import { DecrementIcon } from "../../icons/DecrementIcon";
-import { TrashCanIcon } from "../../icons/TrashCanIcon";
-import { poppins } from "../../fonts";
+import { ArrowIcon } from "@icons/ArrowIcon";
+import { IncrementIcon } from "@icons/IncrementIcon";
+import { DecrementIcon } from "@icons/DecrementIcon";
+import { TrashCanIcon } from "@icons/TrashCanIcon";
+import { poppins } from "@fonts";
 
 export default function CartItem({ dish }: { dish: Dish }) {
   const [showInfo, setShowInfo] = useState(false);

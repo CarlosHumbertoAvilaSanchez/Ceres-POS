@@ -1,6 +1,6 @@
 import {useContext} from 'react'
-import {CategoriesContext} from '../context/category'
-import type { Dish } from '../definitions'
+import {CategoriesContext} from '@lib/context/category'
+import type { Dish } from "@types"
 
 export function useCategories(){
     const {activeCategory, setActiveCategory} = useContext(CategoriesContext)

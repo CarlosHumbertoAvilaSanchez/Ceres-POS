@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./ui/globals.css";
-import { raleway } from "./ui/fonts";
+import { raleway } from "@fonts";
 
 export const metadata: Metadata = {
   title: "Ceres",

@@ -1,6 +1,6 @@
-import { poppins } from "../../fonts";
-import { useCart } from "@/app/lib/hooks/useCart";
-import CartItem from "./CartItem";
+import { poppins } from "@fonts";
+import { useCart } from "@hooks/useCart";
+import CartItem from "@components/menu/CartItem";
 
 export default function ShoppingCart() {
   const { cart } = useCart();

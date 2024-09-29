@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import type { Dish } from "../definitions";
+import type { Dish } from "@types";
 
 export const CartContext = createContext({
   cart: [] as Dish[],

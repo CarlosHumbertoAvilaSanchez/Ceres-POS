@@ -1,5 +1,5 @@
-import type { Dish } from "../../../lib/definitions";
-import { useCart } from "../../../lib/hooks/useCart";
+import type { Dish } from "@types";
+import { useCart } from "@hooks/useCart";
 export default function DishCard({ dish }: { dish: Dish }) {
   const { addToCart } = useCart();
   return (

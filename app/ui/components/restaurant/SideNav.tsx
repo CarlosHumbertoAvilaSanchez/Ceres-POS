@@ -1,9 +1,9 @@
 "use client";
 
-import DashboardIcon from "../../icons/DashboardIcon";
-import MenuIcon from "../../icons/MenuIcon";
-import EmployeesIcon from "../../icons/EmployeesIcon";
-import ProductsIcon from "../../icons/ProductsIcon";
+import DashboardIcon from "@icons/DashboardIcon";
+import MenuIcon from "@icons/MenuIcon";
+import EmployeesIcon from "@icons/EmployeesIcon";
+import ProductsIcon from "@icons/ProductsIcon";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";

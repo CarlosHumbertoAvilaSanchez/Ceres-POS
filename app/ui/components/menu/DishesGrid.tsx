@@ -1,5 +1,5 @@
-import type { Dish } from "@/app/lib/definitions";
-import DishCard from "@/app/ui/components/menu/DishCard";
+import type { Dish } from "@types";
+import DishCard from "@components/menu/DishCard";
 
 export default function ProductGrid({ dishes }: { dishes: Dish[] }) {
   return (
