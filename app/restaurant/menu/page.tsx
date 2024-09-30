@@ -1,8 +1,8 @@
 "use client";
-import Menu from "@/app/ui/components/menu/Menu";
-import { CategoryProvider } from "@/app/lib/context/category";
-import { CartProvider } from "@/app/lib/context/cart";
-import ShoppingCart from "@/app/ui/components/menu/ShoppingCart";
+import Menu from "@components/menu/Menu";
+import { CategoryProvider } from "@lib/context/category";
+import { CartProvider } from "@lib/context/cart";
+import ShoppingCart from "@components/menu/ShoppingCart";
 
 export default function Page() {
   return (

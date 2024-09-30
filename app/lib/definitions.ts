@@ -1,9 +1,9 @@
-interface Size{
+export interface Size{
     size: string,
     price: number
 }
 
-interface Extra{
+export interface Extra{
     name: string,
     price: number
 }
@@ -14,14 +14,13 @@ export interface Dish {
     price: number,
     imageURL: string,
     category: string,
-    quantity?: number
     sizes?: Size[]
     extras?: Extra[]
 }
 
 export interface ListedDish extends Dish {
-    quantity: number
-    selectdSize?: Size
+    quantity?: number
+    selectedSize?: Size
     selectedExtras?: Extra[]
-    total: number
+    total?: number
 }
