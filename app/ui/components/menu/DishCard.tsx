@@ -8,7 +8,12 @@ export default function DishCard({ dish }: { dish: Dish }) {
   const modalRef = useRef<HTMLDialogElement>(null);
 
   const { addToCart } = useCart();
+
   const handleClick = () => {
+    if (!dish.sizes && !dish.extras) {
+      addToCart(dish);
+      return;
+    }
     modalRef.current?.showModal();
   };
 
@@ -31,9 +36,11 @@ export default function DishCard({ dish }: { dish: Dish }) {
           </h3>
         </footer>
       </div>
-      <Modal modalRef={modalRef} title={dish.name}>
-        <DishForm dish={dish} modalRef={modalRef} />
-      </Modal>
+      {(dish.sizes || dish.extras) && (
+        <Modal modalRef={modalRef} title={dish.name}>
+          <DishForm dish={dish} modalRef={modalRef} />
+        </Modal>
+      )}
     </>
   );
 }

@@ -31,6 +31,16 @@ export const Dishes: Array<Dish> = [
           price: 70
         }
       ],
+      extras:[
+        {
+          name: "Crema",
+          price: 10
+        },
+        {
+          name: "Chispas de chocolate",
+          price: 15
+        }
+      ]
     },
 ];
 
