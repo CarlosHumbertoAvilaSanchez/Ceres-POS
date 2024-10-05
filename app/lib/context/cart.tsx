@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import type { Dish } from "@types";
+import { getTotalPrice } from "../utils/dish";
 import type { ListedDish } from "@types";
 
 export const CartContext = createContext({
@@ -11,11 +11,14 @@ export const CartContext = createContext({
   removeItem: (dish: ListedDish) => {
     dish;
   },
-  incrementQuantity: (dishId: string) => {
-    dishId;
+  incrementQuantity: (dishId: string): ListedDish | null => {
+    return null;
   },
-  decrementQuantity: (dishId: string) => {
-    dishId;
+  decrementQuantity: (dishId: string): ListedDish | null => {
+    return null;
+  },
+  calculateTotal: (): number => {
+    return 0;
   },
 });
 
@@ -56,8 +59,11 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     const newCart = structuredClone(cart);
     if (isDishInCart >= 0) {
       newCart[isDishInCart].quantity = newCart[isDishInCart].quantity! + 1;
+      setCart(newCart);
+      return newCart[isDishInCart];
     }
-    return setCart(newCart);
+
+    return null;
   };
 
   const decrementQuantity = (dishId: string) => {
@@ -70,8 +76,14 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
       if (newCart[isDishInCart].quantity === 0) {
         newCart.splice(isDishInCart, 1);
       }
+      setCart(newCart);
+      return newCart[isDishInCart];
     }
-    return setCart(newCart);
+    return null;
+  };
+
+  const calculateTotal = () => {
+    return cart.reduce((acc, dish) => acc + getTotalPrice(dish), 0);
   };
   return (
     <CartContext.Provider
@@ -82,6 +94,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
         removeItem,
         incrementQuantity,
         decrementQuantity,
+        calculateTotal,
       }}
     >
       {children}

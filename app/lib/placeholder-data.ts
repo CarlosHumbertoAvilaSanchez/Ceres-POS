@@ -17,13 +17,13 @@ export const Dishes: Array<Dish> = [
     },
     {
       id: "3",
-      name: "Malteada de chocolate",
-      price: 50,
+      name: "Malteada",
+      price: 0,
       imageURL: "https://cdn-icons-png.flaticon.com/512/2234/2234936.png",
       category: "Bebida",
       sizes:[
         {
-          size: "Chico",
+          size: "Chica",
           price: 50
         },
         {
