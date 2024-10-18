@@ -1,7 +1,7 @@
 import { poppins } from "@fonts";
 import { useCart } from "@hooks/useCart";
 import CartItem from "@components/menu/CartItem";
-
+import type { Order } from "@/lib/definitions";
 export default function ShoppingCart() {
   const { cart, calculateTotal } = useCart();
 
@@ -10,6 +10,23 @@ export default function ShoppingCart() {
       alert("No hay productos en el carrito");
       return;
     }
+
+    const order: Order = {
+      id: "400",
+      dishes: cart,
+      total: calculateTotal(),
+      customer: "John Doe",
+      employee: "Jane Doe",
+      date: new Date().toDateString(),
+      paymentMethod: "Credit Card",
+      branch: {
+        id: "1",
+        name: "Branch 1",
+        address: "1234 Main St",
+        phone: "123-456-7890",
+      },
+    };
+    console.log(order);
   };
   return (
     <aside className="flex flex-col bg-gray-100 rounded-2xl p-8">

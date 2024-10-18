@@ -9,10 +9,10 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const ICONS_POSITION: Record<
-  "restaurant" | "menu" | "products" | "employees",
+  "dashboard" | "menu" | "products" | "employees",
   string
 > = {
-  restaurant: "-top-4",
+  dashboard: "-top-4",
   menu: "top-16",
   products: "top-36",
   employees: "top-56",
@@ -23,32 +23,31 @@ export default function Navbar() {
   const pathname = usePathname();
 
   useEffect(() => {
-    const currentPage = pathname.split("/")[2] as keyof typeof ICONS_POSITION;
-    setPosition(ICONS_POSITION[currentPage] || ICONS_POSITION["restaurant"]);
+    const currentPage = pathname.split("/")[3] as keyof typeof ICONS_POSITION;
+    setPosition(ICONS_POSITION[currentPage] || ICONS_POSITION["dashboard"]);
   }, [pathname]);
-
   return (
     <>
       <aside className="bg-black opacity-90 p-2 w-20 rounded-3xl">
         <nav className="flex flex-col h-full justify-center items-center">
           <ul className="flex flex-col items-center relative restaurant__nav">
             <li className="flex h-20">
-              <Link href="/restaurant">
+              <Link href="/restaurant/dashboard">
                 <DashboardIcon />
               </Link>
             </li>
             <li className="flex h-20">
-              <Link href="/restaurant/menu">
+              <Link href="/restaurant/dashboard/menu">
                 <MenuIcon />
               </Link>
             </li>
             <li className="flex h-20">
-              <Link href="/restaurant/products">
+              <Link href="/restaurant/dashboard/products">
                 <ProductsIcon />
               </Link>
             </li>
             <li className="flex h-20">
-              <Link href="/restaurant/employees">
+              <Link href="/restaurant/dashboard/employees">
                 <EmployeesIcon />
               </Link>
             </li>

@@ -24,3 +24,28 @@ export interface ListedDish extends Dish {
     selectedExtras?: Extra[]
     total?: number
 }
+
+export interface Branch{
+    id: string,
+    name: string,
+    address: string,
+    phone: string
+}
+
+export interface Order{
+    id: string,
+    branch: Branch,
+    employee: string,
+    customer: string,
+    date: string,
+    paymentMethod: string,
+    dishes: ListedDish[],
+    total: number
+}
+
+export interface Category{
+    id: string,
+    category:string
+    createdAt: string
+    restaurant_id: string
+}

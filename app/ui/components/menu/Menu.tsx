@@ -1,12 +1,13 @@
 import DishesGrid from "@components/menu/DishesGrid";
 import DishCategoryFilter from "@components/menu/DishCategoryFilter";
 import { useCategories } from "@hooks/useCategories";
-import { Dishes } from "@lib/placeholder-data";
+import { useDishes } from "@/lib/hooks/useDishes";
 
 export default function Menu() {
   const { filterDishes } = useCategories();
-  const filteredDishes = filterDishes(Dishes);
-
+  const { dishes } = useDishes();
+  console.log(dishes);
+  const filteredDishes = filterDishes(dishes);
   return (
     <main className="rounded-md p-8 grid grid-rows-menu">
       <header>
